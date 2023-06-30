@@ -1,0 +1,118 @@
+.button-grow {
+  color: #65b5f6;
+  background-color: transparent;
+  border: 1px solid #65b5f6;
+  border-radius: 4px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-grow:hover {
+  transform: scale(1.1);
+}
+
+.button-shrink {
+  color: #65b5f6;
+  background-color: transparent;
+  border: 1px solid #65b5f6;
+  border-radius: 4px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-shrink:hover {
+  transform: scale(0.8);
+}
+
+.animated-fill-button {
+  padding: 20px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.animated-fill-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.button-swing {
+  color: #65b5f6;
+  background-color: transparent;
+  border: 1px solid #65b5f6;
+  border-radius: 4px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-swing:focus {
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes swing {
+  15% {
+    transform: translateX(5px);
+  }
+
+  30% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+
+  65% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animated-border-button {
+  background-color: #263059;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+}
+
+.animated-border-button::before,
+.animated-border-button::after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.animated-border-button::before {
+  border-top: 2px solid #263059;
+  right: 0;
+  top: -4px;
+}
+
+.animated-border-button::after {
+  border-bottom: 2px solid #263059;
+  bottom: -4px;
+  left: 0;
+}
+
+.animated-border-button:hover::before,
+.animated-border-button:hover::after {
+  width: 100%;
+}
